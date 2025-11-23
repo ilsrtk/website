@@ -1,9 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Регистрация — BestGames</title>
-<link rel="stylesheet" href="./css/style.css"></head>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Регистрация — BestGames</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
 <body>
-  <header class="header"><div class="container header__wrap"><a href="index.html" class="header__logo"><img src="./assets/img/logo.svg" alt="logo"></a></div></header>
+  <header class="header">
+    <div class="header__logo">
+      <a href="index.html"><img src="./assets/img/logo.svg" alt="BestGames"></a>
+    </div>
+
+    <!-- Burger для мобилок и планшетов -->
+    <input type="checkbox" id="nav-toggle" class="header__checkbox">
+    <label for="nav-toggle" class="header__burger">
+      <span></span><span></span><span></span>
+    </label>
+
+    <!-- навигация -->
+    <nav class="header__nav">
+      <ul class="nav__list">
+        <li><a href="#search" class="nav__link">Поиск</a></li>
+        <li><a href="login.html" class="nav__link">Войти</a></li>
+        <li><a href="profile.html" class="nav__link">Личный кабинет</a></li>
+        <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+      </ul>
+    </nav>
+  </header>
   <main class="container" style="padding:30px 0">
     <h1 class="h1">Регистрация</h1>
     <form class="form form--register" style="max-width:640px" action="#" method="post">
@@ -18,6 +44,32 @@
       <div style="margin-top:8px"><button class="btn" type="submit">Зарегистрироваться</button></div>
     </form>
   </main>
-  <footer class="footer"><div class="container footer__cols"> ... </div></footer>
+  <footer class="footer">
+    <div class="container footer__container">
+
+      <div class="footer__contacts">
+        <a href="tel:+78009995599">8-800-999-55-99</a>
+        <a href="mailto:best@games.ru">best@games.ru</a>
+      </div>
+
+      <div class="footer__links">
+        <a href="#">Клиентам</a>
+        <a href="#">Партнёрам</a>
+        <a href="#">О нас</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+
+      <div class="footer__nav">
+        <span>Навигация:</span>
+        <a href="index.html">Главная</a>
+        <a href="register.html">Регистрация</a>
+        <a href="login.html">Авторизация</a>
+        <a href="profile.html">Личный кабинет</a>
+        <a href="index.html#search">Поиск</a>
+      </div>
+
+    </div>
+  </footer>
 </body>
+
 </html>

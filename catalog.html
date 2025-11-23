@@ -1,34 +1,113 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Каталог — BestGames</title>
-<link rel="stylesheet" href="./css/style.css"></head>
-<body>
-  <header class="header"><div class="container header__wrap"><a href="index.html" class="header__logo"><img src="./assets/img/logo.svg" alt="logo"></a></div></header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог — BestGames</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="theme-dark">
 
-  <main class="container" style="padding:20px 0">
-    <h1 class="h1">Каталог игр</h1>
-    <div class="catalog-wrap">
-      <!-- sidebar (hidden on mobile, visible on desktop via CSS) -->
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__container">
+
+      <!-- Логотип -->
+      <a href="index.html" class="header__logo">
+        <img src="./assets/img/logo.svg" alt="BestGames">
+      </a>
+
+      <!-- Burger для мобильных/планшетов -->
+      <input type="checkbox" id="nav-toggle" class="header__checkbox">
+      <label for="nav-toggle" class="header__burger">
+        <span></span><span></span><span></span>
+      </label>
+
+      <!-- Навигация -->
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li><a href="index.html#search" class="nav__link">Поиск</a></li>
+          <li><a href="login.html" class="nav__link">Войти</a></li>
+          <li><a href="profile.html" class="nav__link">Личный кабинет</a></li>
+          <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container catalog">
+    <h1 class="page-title">Каталог игр</h1>
+
+    <div class="catalog__wrapper">
+      <!-- Фильтры -->
       <aside class="catalog__filters">
         <h3>Фильтры</h3>
-        <label><input type="checkbox"> Action</label><br>
-        <label><input type="checkbox"> RPG</label><br>
-        <label><input type="checkbox"> Strategy</label><br>
+        <label><input type="checkbox"> Action</label>
+        <label><input type="checkbox"> RPG</label>
+        <label><input type="checkbox"> Strategy</label>
+        <label><input type="checkbox"> Sim</label>
       </aside>
 
+      <!-- Сетка карточек -->
       <section class="catalog__grid">
-        <div class="games__grid">
-          <!-- many cards (reuse game-card) -->
-          <a class="game-card" href="#"><div class="game-card__img" style="background:#111"></div><div class="game-card__title">Игра 1</div><div class="game-card__meta">RPG</div><div class="game-card__price">990 ₽</div></a>
-          <a class="game-card" href="#"><div class="game-card__img" style="background:#111"></div><div class="game-card__title">Игра 2</div><div class="game-card__meta">Action</div><div class="game-card__price">420 ₽</div></a>
-          <a class="game-card" href="#"><div class="game-card__img" style="background:#111"></div><div class="game-card__title">Игра 3</div><div class="game-card__meta">Strategy</div><div class="game-card__price">1490 ₽</div></a>
-          <a class="game-card" href="#"><div class="game-card__img" style="background:#111"></div><div class="game-card__title">Игра 4</div><div class="game-card__meta">Sim</div><div class="game-card__price">190 ₽</div></a>
-          <!-- add more cards to test grid -->
-        </div>
+        <a class="game-card" href="#">
+          <img src="./assets/img/game-placeholder.png" alt="Игра 1">
+          <h3 class="game-card__title">Игра 1</h3>
+          <p class="game-card__genre">RPG</p>
+          <p class="game-card__price">990 ₽</p>
+        </a>
+
+        <a class="game-card" href="#">
+          <img src="./assets/img/game-placeholder.png" alt="Игра 2">
+          <h3 class="game-card__title">Игра 2</h3>
+          <p class="game-card__genre">Action</p>
+          <p class="game-card__price">420 ₽</p>
+        </a>
+
+        <a class="game-card" href="#">
+          <img src="./assets/img/game-placeholder.png" alt="Игра 3">
+          <h3 class="game-card__title">Игра 3</h3>
+          <p class="game-card__genre">Strategy</p>
+          <p class="game-card__price">1490 ₽</p>
+        </a>
+
+        <a class="game-card" href="#">
+          <img src="./assets/img/game-placeholder.png" alt="Игра 4">
+          <h3 class="game-card__title">Игра 4</h3>
+          <p class="game-card__genre">Sim</p>
+          <p class="game-card__price">190 ₽</p>
+        </a>
       </section>
     </div>
   </main>
 
-  <footer class="footer"><div class="container footer__cols"> ... </div></footer>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__contacts">
+        <a href="tel:+78009995599">8-800-999-55-99</a>
+        <a href="mailto:best@games.ru">best@games.ru</a>
+      </div>
+
+      <div class="footer__links">
+        <a href="#">Клиентам</a>
+        <a href="#">Партнёрам</a>
+        <a href="#">О нас</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+
+      <div class="footer__nav">
+        <span>Навигация:</span>
+        <a href="index.html">Главная</a>
+        <a href="register.html">Регистрация</a>
+        <a href="login.html">Авторизация</a>
+        <a href="profile.html">Личный кабинет</a>
+        <a href="index.html#search">Поиск</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

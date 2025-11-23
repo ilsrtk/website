@@ -1,23 +1,115 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Админ — BestGames</title>
-<link rel="stylesheet" href="./css/style.css"></head>
-<body>
-  <header class="header"><div class="container header__wrap"><a class="header__logo" href="index.html"><img src="./assets/img/logo.svg" alt="logo"></a></div></header>
-  <main class="container" style="padding:30px 0">
-    <h1 class="h1">Административная панель</h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Админ — BestGames</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="theme-dark">
 
-    <form class="admin__form" action="#" method="post" enctype="multipart/form-data" style="max-width:700px">
-      <label class="form__row"><span>Название игры</span><input class="form__input" type="text" required></label>
-      <label class="form__row"><span>Жанр</span><select class="form__select"><option>RPG</option><option>Action</option></select></label>
-      <label class="form__row"><span>Изображение</span><input type="file" accept="image/*"></label>
-      <label class="form__row"><span>Компания-разработчик</span><input class="form__input" type="text"></label>
-      <label class="form__row"><span>Описание</span><textarea class="form__textarea"></textarea></label>
-      <label class="form__row"><span>Стоимость</span><input class="form__input" type="number" min="0"></label>
-      <div><button class="btn" type="submit">Добавить</button></div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo">
+        <img src="./assets/img/logo.svg" alt="BestGames">
+      </a>
+
+      <!-- Burger для планшета и телефона -->
+      <input type="checkbox" id="nav-toggle" class="header__checkbox">
+      <label for="nav-toggle" class="header__burger">
+        <span></span><span></span><span></span>
+      </label>
+
+      <!-- Navigation -->
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li><a href="index.html#search" class="nav__link">Поиск</a></li>
+          <li><a href="login.html" class="nav__link">Войти</a></li>
+          <li><a href="profile.html" class="nav__link">Личный кабинет</a></li>
+          <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container admin" >
+    <h1 class="page-title">Административная панель</h1>
+
+    <form class="form admin__form" action="#" method="post" enctype="multipart/form-data">
+      <div class="form__row">
+        <label>Название игры
+          <input type="text" class="form__input" required>
+        </label>
+      </div>
+
+      <div class="form__row">
+        <label>Жанр
+          <select class="form__select">
+            <option>RPG</option>
+            <option>Action</option>
+            <option>Strategy</option>
+            <option>Sim</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="form__row">
+        <label>Изображение
+          <input type="file" accept="image/*">
+        </label>
+      </div>
+
+      <div class="form__row">
+        <label>Компания-разработчик
+          <input type="text" class="form__input">
+        </label>
+      </div>
+
+      <div class="form__row">
+        <label>Описание
+          <textarea class="form__textarea"></textarea>
+        </label>
+      </div>
+
+      <div class="form__row">
+        <label>Стоимость
+          <input type="number" class="form__input" min="0">
+        </label>
+      </div>
+
+      <div class="form__actions">
+        <button type="submit" class="btn">Добавить</button>
+      </div>
     </form>
-
   </main>
-  <footer class="footer"><div class="container footer__cols"> ... </div></footer>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__contacts">
+        <a href="tel:+78009995599">8-800-999-55-99</a>
+        <a href="mailto:best@games.ru">best@games.ru</a>
+      </div>
+
+      <div class="footer__links">
+        <a href="#">Клиентам</a>
+        <a href="#">Партнёрам</a>
+        <a href="#">О нас</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+
+      <div class="footer__nav">
+        <span>Навигация:</span>
+        <a href="index.html">Главная</a>
+        <a href="register.html">Регистрация</a>
+        <a href="login.html">Авторизация</a>
+        <a href="profile.html">Личный кабинет</a>
+        <a href="index.html#search">Поиск</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

@@ -1,39 +1,121 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Профиль — BestGames</title>
-<link rel="stylesheet" href="./css/style.css"></head>
-<body>
-  <header class="header"><div class="container header__wrap"><a href="index.html" class="header__logo"><img src="./assets/img/logo.svg" alt="logo"></a></div></header>
-  <main class="container" style="padding:28px 0">
-    <h1 class="h1">Личный кабинет</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Личный кабинет — BestGames</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="theme-dark">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__container">
+      <!-- Логотип -->
+      <a href="index.html" class="header__logo">
+        <img src="./assets/img/logo.svg" alt="BestGames">
+      </a>
+
+      <!-- Burger menu для мобилок и планшетов -->
+      <input type="checkbox" id="nav-toggle" class="header__checkbox">
+      <label for="nav-toggle" class="header__burger">
+        <span></span><span></span><span></span>
+      </label>
+
+      <!-- Навигация -->
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li><a href="index.html#search" class="nav__link">Поиск</a></li>
+          <li><a href="login.html" class="nav__link">Войти</a></li>
+          <li><a href="profile.html" class="nav__link">Личный кабинет</a></li>
+          <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container profile">
+    <h1 class="page-title">Личный кабинет</h1>
+
     <div class="profile__inner">
+      
+      <!-- Информация о пользователе -->
       <section class="profile__card">
-        <h3>Информация о пользователе</h3>
+        <h2 class="profile__title">Информация о пользователе</h2>
         <p>E-mail: user@example.com</p>
         <p>Фамилия: Иванов</p>
         <p>Имя: Иван</p>
         <p>Дата рождения: 01.01.2000</p>
         <p>Телефон: +7 900 000 00 00</p>
+        <button class="btn profile__btn">Сменить пароль</button>
       </section>
 
+      <!-- История покупок -->
       <section class="profile__card">
-        <h3>История покупок</h3>
-        <table style="width:100%;border-collapse:collapse;color:var(--text)">
-          <thead><tr><th align="left">Дата</th><th align="left">Товар</th><th align="left">Стоимость</th></tr></thead>
+        <h2 class="profile__title">История покупок</h2>
+        <table class="profile__table">
+          <thead>
+            <tr>
+              <th>Дата</th>
+              <th>Товар</th>
+              <th>Стоимость</th>
+            </tr>
+          </thead>
           <tbody>
-            <tr><td>2025-05-01</td><td>Грань Теней</td><td>1290 ₽</td></tr>
-            <tr><td>2025-04-12</td><td>КосмоПульс</td><td>890 ₽</td></tr>
+            <tr>
+              <td>2025-05-01</td>
+              <td>Грань Теней</td>
+              <td>1290 ₽</td>
+            </tr>
+            <tr>
+              <td>2025-04-12</td>
+              <td>КосмоПульс</td>
+              <td>890 ₽</td>
+            </tr>
           </tbody>
         </table>
       </section>
 
+      <!-- Настройки профиля -->
       <section class="profile__card">
-        <h3>Настройки профиля</h3>
-        <label style="display:flex;gap:10px;align-items:center"><input type="checkbox" id="themeToggle"> Светлая тема (требует перезагрузки страницы)</label>
-        <p style="opacity:.8;font-size:13px">(переключаем через index_light.html / index.html)</p>
+        <h2 class="profile__title">Настройки профиля</h2>
+        <label class="profile__theme-toggle">
+          <input type="checkbox"> Светлая тема (требует перезагрузки страницы)
+        </label>
+        <p class="profile__note">(переключаем через index_light.html / index.html)</p>
       </section>
+
     </div>
   </main>
-  <footer class="footer"><div class="container footer__cols"> ... </div></footer>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__container">
+
+      <div class="footer__contacts">
+        <a href="tel:+78009995599">8-800-999-55-99</a>
+        <a href="mailto:best@games.ru">best@games.ru</a>
+      </div>
+
+      <div class="footer__links">
+        <a href="#">Клиентам</a>
+        <a href="#">Партнёрам</a>
+        <a href="#">О нас</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+
+      <div class="footer__nav">
+        <span>Навигация:</span>
+        <a href="index.html">Главная</a>
+        <a href="register.html">Регистрация</a>
+        <a href="login.html">Авторизация</a>
+        <a href="profile.html">Личный кабинет</a>
+        <a href="index.html#search">Поиск</a>
+      </div>
+
+    </div>
+  </footer>
+
 </body>
 </html>
