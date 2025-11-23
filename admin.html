@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Админ — BestGames</title>
+<link rel="stylesheet" href="./css/style.css"></head>
+<body>
+  <header class="header"><div class="container header__wrap"><a class="header__logo" href="index.html"><img src="./assets/img/logo.svg" alt="logo"></a></div></header>
+  <main class="container" style="padding:30px 0">
+    <h1 class="h1">Административная панель</h1>
+
+    <form class="admin__form" action="#" method="post" enctype="multipart/form-data" style="max-width:700px">
+      <label class="form__row"><span>Название игры</span><input class="form__input" type="text" required></label>
+      <label class="form__row"><span>Жанр</span><select class="form__select"><option>RPG</option><option>Action</option></select></label>
+      <label class="form__row"><span>Изображение</span><input type="file" accept="image/*"></label>
+      <label class="form__row"><span>Компания-разработчик</span><input class="form__input" type="text"></label>
+      <label class="form__row"><span>Описание</span><textarea class="form__textarea"></textarea></label>
+      <label class="form__row"><span>Стоимость</span><input class="form__input" type="number" min="0"></label>
+      <div><button class="btn" type="submit">Добавить</button></div>
+    </form>
+
+  </main>
+  <footer class="footer"><div class="container footer__cols"> ... </div></footer>
+</body>
+</html>

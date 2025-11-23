@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Каталог — BestGames</title>
+<link rel="stylesheet" href="./css/style.css"></head>
+<body>
+  <header class="header"><div class="container header__wrap"><a href="index.html" class="header__logo"><img src="./assets/img/logo.svg" alt="logo"></a></div></header>
+
+  <main class="container" style="padding:20px 0">
+    <h1 class="h1">Каталог игр</h1>
+    <div class="catalog-wrap">
+      <!-- sidebar (hidden on mobile, visible on desktop via CSS) -->
+      <aside class="catalog__filters">
+        <h3>Фильтры</h3>
+        <label><input type="checkbox"> Action</label><br>
+        <label><input type="checkbox"> RPG</label><br>
+        <label><input type="checkbox"> Strategy</label><br>
+      </aside>
+
+      <section class="catalog__grid">
+        <div class="games__grid">
+          <!-- many cards (reuse game-card) -->
+          <a class="game-card" href="#"><div class="game-card__img" style="background:#111"></div><div class="game-card__title">Игра 1</div><div class="game-card__meta">RPG</div><div class="game-card__price">990 ₽</div></a>
+          <a class="game-card" href="#"><div class="game-card__img" style="background:#111"></div><div class="game-card__title">Игра 2</div><div class="game-card__meta">Action</div><div class="game-card__price">420 ₽</div></a>
+          <a class="game-card" href="#"><div class="game-card__img" style="background:#111"></div><div class="game-card__title">Игра 3</div><div class="game-card__meta">Strategy</div><div class="game-card__price">1490 ₽</div></a>
+          <a class="game-card" href="#"><div class="game-card__img" style="background:#111"></div><div class="game-card__title">Игра 4</div><div class="game-card__meta">Sim</div><div class="game-card__price">190 ₽</div></a>
+          <!-- add more cards to test grid -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container footer__cols"> ... </div></footer>
+</body>
+</html>

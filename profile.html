@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Профиль — BestGames</title>
+<link rel="stylesheet" href="./css/style.css"></head>
+<body>
+  <header class="header"><div class="container header__wrap"><a href="index.html" class="header__logo"><img src="./assets/img/logo.svg" alt="logo"></a></div></header>
+  <main class="container" style="padding:28px 0">
+    <h1 class="h1">Личный кабинет</h1>
+    <div class="profile__inner">
+      <section class="profile__card">
+        <h3>Информация о пользователе</h3>
+        <p>E-mail: user@example.com</p>
+        <p>Фамилия: Иванов</p>
+        <p>Имя: Иван</p>
+        <p>Дата рождения: 01.01.2000</p>
+        <p>Телефон: +7 900 000 00 00</p>
+      </section>
+
+      <section class="profile__card">
+        <h3>История покупок</h3>
+        <table style="width:100%;border-collapse:collapse;color:var(--text)">
+          <thead><tr><th align="left">Дата</th><th align="left">Товар</th><th align="left">Стоимость</th></tr></thead>
+          <tbody>
+            <tr><td>2025-05-01</td><td>Грань Теней</td><td>1290 ₽</td></tr>
+            <tr><td>2025-04-12</td><td>КосмоПульс</td><td>890 ₽</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="profile__card">
+        <h3>Настройки профиля</h3>
+        <label style="display:flex;gap:10px;align-items:center"><input type="checkbox" id="themeToggle"> Светлая тема (требует перезагрузки страницы)</label>
+        <p style="opacity:.8;font-size:13px">(переключаем через index_light.html / index.html)</p>
+      </section>
+    </div>
+  </main>
+  <footer class="footer"><div class="container footer__cols"> ... </div></footer>
+</body>
+</html>

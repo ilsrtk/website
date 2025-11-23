@@ -18,7 +18,7 @@
                 <img src="./assets/img/logo.svg" alt="BestGames">
             </a>
 
-            <!-- Бургер для мобильных -->
+            <!-- Бургер -->
             <button class="header__burger" aria-label="Меню">
                 <span></span><span></span><span></span>
             </button>
@@ -38,13 +38,19 @@
 
     <main>
 
-        <!-- СЛАЙДЕР -->
+        <!-- СЛАЙДЕР (без JS) -->
         <section class="slider">
             <div class="container">
                 <h2 class="section-title">Новинки</h2>
 
+                <!-- Переключатели -->
+                <input type="radio" name="slider" id="s1" checked>
+                <input type="radio" name="slider" id="s2">
+                <input type="radio" name="slider" id="s3">
+
                 <div class="slider__wrapper">
-                    <div class="slider__slide">
+
+                    <div class="slider__slide" data-index="1">
                         <img src="./assets/img/game1.jpg" alt="Game 1">
                         <div class="slider__info">
                             <h3>Game Title 1</h3>
@@ -53,7 +59,7 @@
                         </div>
                     </div>
 
-                    <div class="slider__slide">
+                    <div class="slider__slide" data-index="2">
                         <img src="./assets/img/game2.jpg" alt="Game 2">
                         <div class="slider__info">
                             <h3>Game Title 2</h3>
@@ -62,7 +68,7 @@
                         </div>
                     </div>
 
-                    <div class="slider__slide">
+                    <div class="slider__slide" data-index="3">
                         <img src="./assets/img/game3.jpg" alt="Game 3">
                         <div class="slider__info">
                             <h3>Game Title 3</h3>
@@ -72,11 +78,21 @@
                     </div>
                 </div>
 
-                <div class="slider__dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                <!-- Кнопки-переключатели -->
+                <div class="slider__controls">
+                    <label for="s1" class="dot"></label>
+                    <label for="s2" class="dot"></label>
+                    <label for="s3" class="dot"></label>
                 </div>
+
+                <!-- Стрелки -->
+                <div class="slider__arrows">
+                    <label for="s3" class="arrow prev">‹</label>
+                    <label for="s2" class="arrow next">›</label>
+
+                    <label for="s1" class="arrow next"></label>
+                </div>
+
             </div>
         </section>
 
@@ -133,7 +149,6 @@
                         <p class="game-card__price">1990 ₽</p>
                     </a>
 
-                    <!-- Дальше 4+ таких же карточек -->
                 </div>
             </div>
         </section>
